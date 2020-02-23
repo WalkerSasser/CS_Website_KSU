@@ -1,0 +1,32 @@
+<%- include("partials/header") %> 
+
+<div class="container">
+    <header class="jumbotron">
+        <div class="container">
+            <h1>Assignments for CS 1234</h1>
+            <p>Choice code, enjoy.</p>
+            <p>
+                <a class="btn btn-primary btn-large" href="%">Add new assignment</a>
+            </p>
+        </div>
+    </header>
+</div>
+
+<h1>Test github</h1>
+
+<div class="row">
+    <div class="col-lg-12">
+        <h3>Most Popular Assignments</h3>
+    </div>
+</div>
+
+<div class="row text-center" style="display: flex; flex-wrap: wrap;">
+    <% for (var x = 0; x < assignments.length; x++) { %>
+        <div class="col-md-3 col-sm-6">
+            <div class="thumbnail">
+                <h4><%=assignments[x]%></h4> <% ;//print out assignments (rn I just have an array in app.js to do the trick for us) %> 
+            </div>
+        </div>
+    <%}%>
+</div>
+<%- include("partials/footer") %> 
